@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Chrome-Auto-scripter",
+    "version": "0.0.1",
+    "background": {
+        "scripts": [
+            "js/init.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {},
+    "options_ui": {
+        "page": "html/option.html",
+        "open_in_tab": true
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "js/main.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "*"
+    ],
+    "permissions": [
+        "<all_urls>",
+        "activeTab",
+        "storage"
+    ]
+}
