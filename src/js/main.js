@@ -1,6 +1,6 @@
 // Naver sports advertisement auto skip
 function naverSportsAutoSkip() {
-    const naverSportsURL = "sports.news.naver.com/tv/index.nhn";
+    const naverSportsURL = "sports.naver.com/tv/index.nhn";
     let curURL = document.location.hostname + document.location.pathname;
 
     if (curURL === naverSportsURL) {
@@ -19,6 +19,10 @@ function naverSportsAutoSkip() {
                 }
             }
         }, 300);
+
+        let autoClearFunc = setTimeout(() => {
+            clearInterval(autoClickFunc);
+        }, 30000);
     }
 };
 
