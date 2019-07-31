@@ -1,12 +1,15 @@
 {
     "name": "Chrome-Auto-scriptor",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Chrome Auto scriptor : Make chrome More easier",
     "manifest_version": 2,
     "content_scripts": [
         {
             "js": ["js/main.js"],
-            "matches": ["https://sports.naver.com/*"],
+            "matches": [
+                "https://sports.naver.com/*",
+                "https://sports.news.naver.com/*"
+            ],
             "run_at": "document_end"
         }
     ],

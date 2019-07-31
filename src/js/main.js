@@ -1,9 +1,9 @@
 // Naver sports advertisement auto skip
 function naverSportsAutoSkip() {
-    const naverSportsURL = "sports.naver.com/tv/index.nhn";
+    const naverSportsURLs = ["sports.naver.com/tv/index.nhn", "sports.news.naver.com/tv/index.nhn"];
     let curURL = document.location.hostname + document.location.pathname;
 
-    if (curURL === naverSportsURL) {
+    if (naverSportsURLs.includes(curURL)) {
         let autoClickFunc = setInterval(() => {
             let button = document.getElementsByClassName("skipBtn").item(0);
             try {
