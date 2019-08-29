@@ -1,6 +1,6 @@
 {
     "name": "Chrome-Auto-scriptor",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Chrome Auto scriptor : Make chrome More easier",
     "manifest_version": 2,
     "content_scripts": [
